@@ -9,23 +9,23 @@ const requireFromHere = createRequire(__filename);
 
 const PACKAGE_BY_TARGET = {
   "darwin-arm64": {
-    packageName: "@samuelfaj/distill-darwin-arm64",
+    packageName: "@kswork2001/tokenless-darwin-arm64",
     binaryName: "distill"
   },
   "darwin-x64": {
-    packageName: "@samuelfaj/distill-darwin-x64",
+    packageName: "@kswork2001/tokenless-darwin-x64",
     binaryName: "distill"
   },
   "linux-arm64": {
-    packageName: "@samuelfaj/distill-linux-arm64",
+    packageName: "@kswork2001/tokenless-linux-arm64",
     binaryName: "distill"
   },
   "linux-x64": {
-    packageName: "@samuelfaj/distill-linux-x64",
+    packageName: "@kswork2001/tokenless-linux-x64",
     binaryName: "distill"
   },
   "win32-x64": {
-    packageName: "@samuelfaj/distill-win32-x64",
+    packageName: "@kswork2001/tokenless-win32-x64",
     binaryName: "distill.exe"
   }
 };
@@ -36,7 +36,7 @@ function resolveBinaryPath() {
 
   if (!targetSpec) {
     console.error(
-      `[distill] Unsupported platform: ${process.platform}/${process.arch}.`
+      `[TokenLess] Unsupported platform: ${process.platform}/${process.arch}.`
     );
     process.exit(1);
   }
@@ -59,7 +59,7 @@ function resolveBinaryPath() {
     }
 
     console.error(
-      `[distill] Missing platform package ${targetSpec.packageName}. Reinstall @samuelfaj/distill for this platform.`
+      `[TokenLess] Missing platform package ${targetSpec.packageName}. Reinstall @kswork2001/tokenless for this platform.`
     );
     process.exit(1);
   }
@@ -69,8 +69,8 @@ const PROGRESS_PREFIX = "__DISTILL_PROGRESS__:";
 const PROGRESS_FRAMES = ["-", "\\", "|", "/"];
 const PROGRESS_DOT_FRAMES = ["", ".", "..", "...", "..", "."];
 const PROGRESS_LABELS = {
-  collecting: "distill: waiting",
-  summarizing: "distill: summarizing"
+  collecting: "TokenLess: waiting",
+  summarizing: "TokenLess: summarizing"
 };
 
 const binPath = resolveBinaryPath();
@@ -192,7 +192,7 @@ const forwardSignal = (signal) => {
 
 child.on("error", (error) => {
   stopProgress();
-  console.error(`[distill] Failed to launch native binary: ${error.message}`);
+  console.error(`[TokenLess] Failed to launch native binary: ${error.message}`);
   process.exit(1);
 });
 

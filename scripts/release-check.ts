@@ -41,8 +41,8 @@ if (binaries.length === 0) {
 
 const cliManifest = manifests[0];
 
-if (cliManifest.name !== "@samuelfaj/distill") {
-  throw new Error("Main package name must stay @samuelfaj/distill.");
+if (cliManifest.name !== "@kswork2001/tokenless") {
+  throw new Error("Main package name must stay @kswork2001/tokenless.");
 }
 
 if (requirePublishMetadata) {

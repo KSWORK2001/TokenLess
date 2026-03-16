@@ -1,7 +1,7 @@
-# @samuelfaj/distill
+# @kswork2001/tokenless
 
 Install with:
 
 ```bash
-npm i -g @samuelfaj/distill
+npm i -g @kswork2001/tokenless
 ```

@@ -7,8 +7,8 @@ import cliPackage from "../packages/cli/package.json";
 import { getCurrentPlatformKey, getPlatformTarget } from "./platform-targets";
 
 const root = path.resolve(import.meta.dir, "..");
-const packDir = await mkdtemp(path.join(tmpdir(), "distill-pack-"));
-const installDir = await mkdtemp(path.join(tmpdir(), "distill-install-"));
+const packDir = await mkdtemp(path.join(tmpdir(), "tokenless-pack-"));
+const installDir = await mkdtemp(path.join(tmpdir(), "tokenless-install-"));
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 
 const currentPlatformPackage = (() => {
@@ -55,7 +55,7 @@ function resolveInstalledShimPath(installDir: string): string {
 
 try {
   runOrThrow(npmCommand, ["pack", "--workspace", currentPlatformPackage, "--pack-destination", packDir], root);
-  runOrThrow(npmCommand, ["pack", "--workspace", "@samuelfaj/distill", "--pack-destination", packDir], root);
+  runOrThrow(npmCommand, ["pack", "--workspace", "@kswork2001/tokenless", "--pack-destination", packDir], root);
   runOrThrow(npmCommand, ["init", "-y"], installDir);
 
   const tarballs = readdirSync(packDir)
@@ -88,7 +88,7 @@ try {
   if (fallbackProcess.status !== 0) {
     throw new Error(
       [fallbackProcess.stdout, fallbackProcess.stderr].filter(Boolean).join("\n") ||
-        "distill fallback smoke failed"
+        "TokenLess fallback smoke failed"
     );
   }
 

@@ -7,37 +7,37 @@ function resolveConfigBaseDir(env: NodeJS.ProcessEnv): string {
   const appData = env.APPDATA?.trim();
 
   if (appData) {
-    return path.join(appData, "distill");
+    return path.join(appData, "tokenless");
   }
 
   const localAppData = env.LOCALAPPDATA?.trim();
 
   if (localAppData) {
-    return path.join(localAppData, "distill");
+    return path.join(localAppData, "tokenless");
   }
   const xdg = env.XDG_CONFIG_HOME?.trim();
 
   if (xdg) {
-    return path.join(xdg, "distill");
+    return path.join(xdg, "tokenless");
   }
 
   const userProfile = env.USERPROFILE?.trim();
 
   if (userProfile) {
-    return path.join(userProfile, "AppData", "Roaming", "distill");
+    return path.join(userProfile, "AppData", "Roaming", "tokenless");
   }
 
   const home = env.HOME?.trim();
 
   if (!home) {
-    throw new Error("Could not resolve a home directory for distill config.");
+    throw new Error("Could not resolve a home directory for TokenLess config.");
   }
 
-  return path.join(home, ".config", "distill");
+  return path.join(home, ".config", "tokenless");
 }
 
 export function resolveConfigPath(env: NodeJS.ProcessEnv): string {
-  const explicit = env.DISTILL_CONFIG_PATH?.trim();
+  const explicit = env.TOKENLESS_CONFIG_PATH?.trim();
 
   if (explicit) {
     return explicit;

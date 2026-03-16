@@ -416,7 +416,7 @@ describe("distill end-to-end", () => {
       );
       runOrThrow(
         npmCommand,
-        ["pack", "--workspace", "@samuelfaj/distill", "--pack-destination", packDir],
+        ["pack", "--workspace", "@kswork2001/tokenless", "--pack-destination", packDir],
         root
       );
       runOrThrow(npmCommand, ["init", "-y"], installDir);

@@ -13,7 +13,7 @@ export interface PlatformTarget {
 export const PLATFORM_TARGETS: PlatformTarget[] = [
   {
     key: "darwin-arm64",
-    packageName: "@samuelfaj/distill-darwin-arm64",
+    packageName: "@kswork2001/tokenless-darwin-arm64",
     packageManifestPath: "packages/distill-darwin-arm64/package.json",
     binaryName: "distill",
     packageBinaryPath: "packages/distill-darwin-arm64/bin/distill",
@@ -24,7 +24,7 @@ export const PLATFORM_TARGETS: PlatformTarget[] = [
   },
   {
     key: "darwin-x64",
-    packageName: "@samuelfaj/distill-darwin-x64",
+    packageName: "@kswork2001/tokenless-darwin-x64",
     packageManifestPath: "packages/distill-darwin-x64/package.json",
     binaryName: "distill",
     packageBinaryPath: "packages/distill-darwin-x64/bin/distill",
@@ -35,7 +35,7 @@ export const PLATFORM_TARGETS: PlatformTarget[] = [
   },
   {
     key: "linux-arm64",
-    packageName: "@samuelfaj/distill-linux-arm64",
+    packageName: "@kswork2001/tokenless-linux-arm64",
     packageManifestPath: "packages/distill-linux-arm64/package.json",
     binaryName: "distill",
     packageBinaryPath: "packages/distill-linux-arm64/bin/distill",
@@ -46,7 +46,7 @@ export const PLATFORM_TARGETS: PlatformTarget[] = [
   },
   {
     key: "linux-x64",
-    packageName: "@samuelfaj/distill-linux-x64",
+    packageName: "@kswork2001/tokenless-linux-x64",
     packageManifestPath: "packages/distill-linux-x64/package.json",
     binaryName: "distill",
     packageBinaryPath: "packages/distill-linux-x64/bin/distill",
@@ -57,7 +57,7 @@ export const PLATFORM_TARGETS: PlatformTarget[] = [
   },
   {
     key: "win32-x64",
-    packageName: "@samuelfaj/distill-win32-x64",
+    packageName: "@kswork2001/tokenless-win32-x64",
     packageManifestPath: "packages/distill-win32-x64/package.json",
     binaryName: "distill.exe",
     packageBinaryPath: "packages/distill-win32-x64/bin/distill.exe",

@@ -511,12 +511,12 @@ export function parseCommand(
 export function formatUsage(): string {
   return [
     "Usage:",
-    '  cmd 2>&1 | distill "question"',
-    '  distill config model "qwen3.5:2b"',
-    "  distill config thinking false",
-    '  distill config provider openai',
-    '  distill config provider lmstudio',
-    '  distill --provider openai-compatible --host http://127.0.0.1:9000/v1 "summarize errors"',
+    '  cmd 2>&1 | TokenLess "question"',
+    '  TokenLess config model "qwen3.5:2b"',
+    "  TokenLess config thinking false",
+    '  TokenLess config provider openai',
+    '  TokenLess config provider lmstudio',
+    '  TokenLess --provider openai-compatible --host http://127.0.0.1:9000/v1 "summarize errors"',
     "",
     "Options:",
     `  --provider <name>     LLM provider: ${SUPPORTED_PROVIDERS} (default: ${DEFAULT_PROVIDER})`,
